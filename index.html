@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="emerald">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasan Kerim Moral - Kıdemli Yazılım Mimarı & Dijital Ürün Tasarımcısı</title>
+  <meta name="description" content="Hasan Kerim Moral'ın kişisel biyografisi, teknoloji yolculuğu, projeleri ve uzmanlık alanlarını tanıtan premium biyografi sitesi.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Mesh & Glow Background -->
+  <div class="ambient-bg">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+  </div>
+  <div class="mouse-follower" id="mouseFollower"></div>
+
+  <!-- STICKY GLASS NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-brand">
+      <img src="./assets/avatar.png" alt="Avatar" class="brand-avatar" id="navAvatar">
+      <span id="navName">Hasan Kerim Moral</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">Hakkımda</a></li>
+      <li><a href="#timeline" class="nav-link">Yolculuk</a></li>
+      <li><a href="#skills" class="nav-link">Uzmanlıklar</a></li>
+      <li><a href="#projects" class="nav-link">Projeler</a></li>
+      <li><a href="#philosophy" class="nav-link">Felsefe</a></li>
+      <li><a href="#contact" class="nav-link">İletişim</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Theme Switcher Dropdown -->
+      <div class="theme-picker">
+        <button class="icon-btn" id="themeBtn" title="Tema Rengi Değiştir">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <div class="theme-menu" id="themeMenu">
+          <button class="theme-option" data-theme-set="emerald">
+            <span class="theme-dot" style="background:#10b981;"></span> Zümrüt (Emerald)
+          </button>
+          <button class="theme-option" data-theme-set="sapphire">
+            <span class="theme-dot" style="background:#3b82f6;"></span> Safir (Sapphire)
+          </button>
+          <button class="theme-option" data-theme-set="amethyst">
+            <span class="theme-dot" style="background:#a855f7;"></span> Amortis (Amethyst)
+          </button>
+          <button class="theme-option" data-theme-set="amber">
+            <span class="theme-dot" style="background:#f59e0b;"></span> Kehribar (Amber)
+          </button>
+        </div>
+      </div>
+
+      <!-- Edit Profile Button -->
+      <button class="btn btn-glass" id="openEditModalBtn" title="Profili Düzenle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Düzenle
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span id="profileStatus">Yeni Proje & İşbirliklerine Açık</span>
+          </div>
+
+          <h1 class="hero-title">
+            Merhaba, Ben <span class="navy-glowing-name" id="heroName">Hasan Kerim Moral</span>
+          </h1>
+
+          <div class="typed-text-wrapper">
+            <span id="typedRole">Kıdemli Yazılım Mimarı</span>
+          </div>
+
+          <p class="hero-description" id="heroBio">
+            Geleceğin dijital dünyasını inşa eden, yüksek performanslı web sistemleri, yapay zekâ entegrasyonları ve kullanıcı odaklı şık arayüzler tasarlayan tutkulu bir teknoloji uzmanıyım.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              İletişime Geç
+            </a>
+            <a href="#projects" class="btn btn-glass">
+              Projeleri İncele
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="icon-btn" title="GitHub" id="socialGithub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="icon-btn" title="LinkedIn" id="socialLinkedin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="icon-btn" title="Twitter/X" id="socialTwitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-frame glass-card">
+            <img src="./assets/avatar.png" alt="Hasan Profil" class="avatar-img" id="heroAvatarImg">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge floating-badge-1 glass-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div>
+              <div style="font-weight:700; font-size:0.9rem;" id="badge1Title">8+ Yıllık Deneyim</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);" id="badge1Sub">Yazılım & Tasarım</div>
+            </div>
+          </div>
+
+          <div class="floating-badge floating-badge-2 glass-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <div style="font-weight:700; font-size:0.9rem;" id="badge2Title">40+ Başarılı Proje</div>
+              <div style="font-size:0.75rem; color:var(--text-secondary);" id="badge2Sub">Küresel Mimari</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="section-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><user cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg>
+        Hakkımda
+      </div>
+      <h2 class="section-title">Ben Kimim & <span class="gradient-text">Vizyonum</span></h2>
+      <p class="section-subtitle">Teknolojiyi sanatla birleştirerek insan hayatına dokunan modern dijital deneyimler geliştiriyorum.</p>
+
+      <div class="about-grid">
+        <div class="glass-card about-card">
+          <h3 style="font-size:1.5rem; margin-bottom:16px;" id="aboutHeading">Teknolojiye Tutkuyla Bağlı Bir Üretici</h3>
+          <p style="color:var(--text-secondary); margin-bottom:20px; line-height:1.7;" id="aboutText1">
+            Sakarya Anadolu Lisesi mezunu olarak temel fen ve analitik disiplinlerle başladığım teknoloji serüvenime, karmaşık yazılım problemlerini zarif çözümlerle aşma tutkusuyla devam ediyorum. Yıllar içerisinde bulut mimarileri, yapay zekâ entegrasyonları ve mikrosaniyeler içinde tepki veren modern web uygulamaları geliştirdim.
+          </p>
+          <p style="color:var(--text-secondary); line-height:1.7;" id="aboutText2">
+            Benim için kod yazmak yalnızca fonksiyonel bir süreç değil; kullanıcı deneyimini kusursuz kılan estetik bir mimari çalışmasıdır.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-number" id="stat1">8+</div>
+              <div class="stat-label">Yıl Deneyim</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" id="stat2">45+</div>
+              <div class="stat-label">Tamamlanan Proje</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" id="stat3">18</div>
+              <div class="stat-label">Ödül & Sertifika</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" id="stat4">100%</div>
+              <div class="stat-label">Müşteri Memnuniyeti</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card about-card">
+          <h3 style="font-size:1.5rem; margin-bottom:24px;">Temel Değerlerim</h3>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1.1rem; margin-bottom:4px;">Kusursuz Kalite</h4>
+                <p style="font-size:0.875rem; color:var(--text-secondary);">Temiz kod standartları, yüksek performans ve sürdürülebilir mimari yaklaşımı.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1.1rem; margin-bottom:4px;">Yenilikçi İnovasyon</h4>
+                <p style="font-size:0.875rem; color:var(--text-secondary);">Yapay zekâ ve en güncel teknolojileri projelere entegre ederek değer yaratmak.</p>
+              </div>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size:1.1rem; margin-bottom:4px;">İnsan Odaklı Tasarım</h4>
+                <p style="font-size:0.875rem; color:var(--text-secondary);">Kullanıcı dostu, sezgisel ve erişilebilir arayüzlerle fark yaratmak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / JOURNEY SECTION -->
+  <section id="timeline">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Kariyer & Eğitim
+        </div>
+        <h2 class="section-title">Teknoloji <span class="gradient-text">Yolculuğum</span></h2>
+        <p class="section-subtitle" style="margin:0 auto 48px auto;">Yıllar içerisinde edindiğim deneyimler, liderlik ettiğim projeler ve akademik geçmişim.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">Tümü</button>
+        <button class="tab-btn" data-filter="experience">Deneyim</button>
+        <button class="tab-btn" data-filter="education">Eğitim</button>
+        <button class="tab-btn" data-filter="achievement">Başarılar</button>
+      </div>
+
+      <div class="timeline" id="timelineContainer">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item" data-category="experience">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <span class="timeline-date">2022 - Günümüz</span>
+            <h3 class="timeline-title">Kıdemli Yazılım Mimarı & Takım Lideri</h3>
+            <div class="timeline-subtitle">Global Tech Solutions Corp.</div>
+            <p style="color:var(--text-secondary); font-size:0.938rem;">
+              Büyük ölçekli bulut uygulamalarının mimarisine liderlik ettim. Microservices geçişi ile sistem performansını %140 artırdık ve 12 kişilik mühendislik ekibine mentorluk yaptım.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item" data-category="experience">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <span class="timeline-date">2019 - 2022</span>
+            <h3 class="timeline-title">Lead Full-Stack Developer</h3>
+            <div class="timeline-subtitle">Nexus Digital Studio</div>
+            <p style="color:var(--text-secondary); font-size:0.938rem;">
+              React, Node.js ve Python tabanlı yüksek trafikli e-ticaret ve SaaS platformlarının sıfırdan geliştirilmesini yönettim.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 (High School) -->
+        <div class="timeline-item" data-category="education">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <span class="timeline-date">Lise Eğitimi</span>
+            <h3 class="timeline-title">Sakarya Anadolu Lisesi</h3>
+            <div class="timeline-subtitle">Lise Mezuniyeti (Sayısal)</div>
+            <p style="color:var(--text-secondary); font-size:0.938rem;">
+              Sakarya Anadolu Lisesi'nden başarıyla mezun oldum. İleri fen ve matematik disiplinleri ile analitik düşünme yapısını ve teknolojiye olan tutkulu temellerimi burada kazandım.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" data-category="education">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <span class="timeline-date">2015 - 2019</span>
+            <h3 class="timeline-title">Yazılım Mühendisliği (Lisans)</h3>
+            <div class="timeline-subtitle">Teknik Üniversitesi</div>
+            <p style="color:var(--text-secondary); font-size:0.938rem;">
+              Bölüm 1.'liği ile mezun oldum. Dağıtık sistemler ve yapay zekâ optimizasyonu üzerine bitirme projesi geliştirdim.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" data-category="achievement">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <span class="timeline-date">2023</span>
+            <h3 class="timeline-title">AWS Certified Solutions Architect</h3>
+            <div class="timeline-subtitle">Amazon Web Services</div>
+            <p style="color:var(--text-secondary); font-size:0.938rem;">
+              Bulut mimarisi tasarımı ve güvenliği konusunda uluslararası geçerliliğe sahip profesyonel sertifikasyon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Yetkinlikler
+        </div>
+        <h2 class="section-title">Uzmanlık & <span class="gradient-text">Teknoloji Yığını</span></h2>
+        <p class="section-subtitle" style="margin:0 auto 48px auto;">Geliştirmede ve mimari tasarımda kullandığım yetkinlik seviyelerim.</p>
+      </div>
+
+      <div class="skills-grid" id="skillsContainer">
+        <!-- Skill Item 1 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript / TypeScript</span>
+            <span class="skill-level-num">95%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 95%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">ES6+</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Async Patterns</span>
+          </div>
+        </div>
+
+        <!-- Skill Item 2 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">React / Next.js / Vue</span>
+            <span class="skill-level-num">90%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 90%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">SSR</span>
+            <span class="skill-tag">State Management</span>
+            <span class="skill-tag">UI Libraries</span>
+          </div>
+        </div>
+
+        <!-- Skill Item 3 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Python & AI Integration</span>
+            <span class="skill-level-num">88%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 88%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">OpenAI API</span>
+          </div>
+        </div>
+
+        <!-- Skill Item 4 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Cloud Architecture & DevOps</span>
+            <span class="skill-level-num">85%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 85%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD Pipelines</span>
+          </div>
+        </div>
+
+        <!-- Skill Item 5 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">UI/UX & Glassmorphism Design</span>
+            <span class="skill-level-num">92%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 92%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Micro-animations</span>
+          </div>
+        </div>
+
+        <!-- Skill Item 6 -->
+        <div class="glass-card skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Database Systems & Microservices</span>
+            <span class="skill-level-num">87%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 87%;"></div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">GraphQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Portfolyo
+        </div>
+        <h2 class="section-title">Öne Çıkan <span class="gradient-text">Projelerim</span></h2>
+        <p class="section-subtitle" style="margin:0 auto 48px auto;">Geliştirdiğim son teknoloji ürünler ve yenilikçi çözümler.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="./assets/project1.png" alt="AI Analytics Dashboard" class="project-img">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Aura Analytics SaaS Platform</h3>
+            <p class="project-desc">Yapay zekâ destekli gerçek zamanlı veri analitiği ve görselleştirme paneli. Saniyede 50.000 veri işleme kapasitesine sahip.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Tailwind</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <a href="#" class="btn btn-glass" style="padding:8px 16px; font-size:0.85rem;" onclick="event.preventDefault(); showToast('Proje inceleme moduna alındı.');">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Canlı Önizleme
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="./assets/project2.png" alt="Mobile Crypto Wallet" class="project-img">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Nova Core Mobile Experience</h3>
+            <p class="project-desc">Ultra güvenli, minimalist biyometrik doğrulamalı kripto cüzdanı ve fintech uygulaması.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React Native</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Web3.js</span>
+              <span class="tech-badge">GraphQL</span>
+            </div>
+            <div style="display:flex; gap:12px;">
+              <a href="#" class="btn btn-glass" style="padding:8px 16px; font-size:0.85rem;" onclick="event.preventDefault(); showToast('Mobil uygulama mağaza demosu açıldı.');">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                İncele
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY & QUOTE SECTION -->
+  <section id="philosophy">
+    <div class="container">
+      <div class="glass-card quote-box">
+        <div class="quote-icon">“</div>
+        <p class="quote-text" id="quoteText">
+          "Gelecek, karmaşıklığı basitleştirebilen ve estetiği performansla birleştirebilen zihinler tarafından inşa edilir."
+        </p>
+        <div class="quote-author" id="quoteAuthor">— Hasan Kerim Moral</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          İletişim
+        </div>
+        <h2 class="section-title">Birlikte Harika Şeyler <span class="gradient-text">Üretelim</span></h2>
+        <p class="section-subtitle" style="margin:0 auto 48px auto;">Yeni projeler, danışmanlık veya sohbet için bana ulaşın.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-size:1.75rem; margin-bottom:16px;">Bir Fikriniz mi Var?</h3>
+          <p style="color:var(--text-secondary); margin-bottom:24px;">
+            Mesajınızı gönderin, en kısa sürede dönüş yapayım. Kahve eşliğinde yeni projeleri konuşmaktan mutluluk duyarım.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.813rem; color:var(--text-secondary);">E-Posta</div>
+                <div style="font-weight:600;" id="contactEmail">hasan@example.com</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.813rem; color:var(--text-secondary);">Konum</div>
+                <div style="font-weight:600;" id="contactLocation">İstanbul / Türkiye (Uzaktan & Hibrit)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding:36px;">
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label">Adınız Soyadınız</label>
+              <input type="text" class="form-control" placeholder="Ör. Ahmet Yılmaz" required id="senderName">
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-Posta Adresiniz</label>
+              <input type="email" class="form-control" placeholder="Ör. ahmet@ornek.com" required id="senderEmail">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mesajınız</label>
+              <textarea class="form-control" placeholder="Projeniz veya iletmek istediğiniz detaylar..." required id="senderMessage"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Mesajı Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 <span id="footerName">Hasan Kerim Moral</span>. Tüm Hakları Saklıdır. Premium One-Page Biyografi Deneyimi.</p>
+    </div>
+  </footer>
+
+  <!-- LIVE PROFILE EDIT MODAL -->
+  <div class="modal-overlay" id="editModal">
+    <div class="glass-card modal-content">
+      <div class="modal-header">
+        <h3 style="font-size:1.4rem;">Profili Canlı Düzenle</h3>
+        <button class="modal-close" id="closeEditModalBtn">&times;</button>
+      </div>
+
+      <form id="editProfileForm">
+        <div class="form-group">
+          <label class="form-label">İsminiz</label>
+          <input type="text" class="form-control" id="inputEditName" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Unvanınız / Rolünüz</label>
+          <input type="text" class="form-control" id="inputEditRole" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Kısa Biyografi (Hero)</label>
+          <textarea class="form-control" id="inputEditBio" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">E-Posta Adresi</label>
+          <input type="email" class="form-control" id="inputEditEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Konum</label>
+          <input type="text" class="form-control" id="inputEditLocation" required>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:28px;">
+          <button type="submit" class="btn btn-primary" style="flex:1;">Kaydet & Güncelle</button>
+          <button type="button" class="btn btn-glass" id="resetProfileBtn">Varsayılana Sıfırla</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container">
+    <div class="toast" id="toastNotification">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span id="toastText">İşlem başarılı!</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
